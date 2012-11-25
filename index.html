@@ -22,15 +22,12 @@
       <div id="index" class="section">
 
         <style>
+          #index {text-align:center;}
           #dropbox {display:table; border:3px dashed #666; text-align:center; margin:auto;}
           #dropbox.over {opacity:0.8; border-color:#0078a3;}
           #dropbox-text {width:88px; height:88px; text-align:center; padding:20px;}
           #smart-player {display:none; margin:1px; margin-bottom:-3px}
-
-          #smart-slider-container {display:none;}
-          #smart-slider-widget {display:table; width:60%; margin:auto; background-color:#f9f9f9; border:1px solid #ddd; padding:10px;}
-          #smart-slider-left {display:table-cell; width:100px; text-align:left;}
-          #smart-slider-right {display:table-cell; width:100px; text-align:right;}
+          .sort-radio-label {font-weight:normal; height:25px;}
         </style>
 
         <div id="dropbox">
@@ -38,15 +35,30 @@
           <div id="smart-player"></div>
         </div>
 
-        <div class="spacer" style="height:15px;"></div>
+        <div class="spacer" style="height:25px;"></div>
 
-        <div id="smart-slider-container">
-          <div id="smart-slider-widget" class="ui-widget ui-corner-all">
-            <span id="smart-slider-left">Less shuffled</span>
-            <div id="smart-slider"></div>
-            <span id="smart-slider-right">More shuffled</span>
-          </div>
+        <div id="sort-title-container">
+          <span>New Playlist Title</span>
+          <input type="text" id="sort-title" class="text ui-corner-all" />
         </div>
+
+        <div class="spacer" style="height:25px;"></div>
+
+        <div id="sort-radio-container">
+          <span>Sort by</span>
+          <label for="sort-on-title" class="sort-radio-label">Title</label>
+          <input type="radio" id="sort-on-title" name="sort-radio" />
+          <label for="sort-on-artist" class="sort-radio-label">Artist</label>
+          <input type="radio" id="sort-on-artist" name="sort-radio" />
+          <label for="sort-on-album" class="sort-radio-label">Album</label>
+          <input type="radio" id="sort-on-album" name="sort-radio" />
+          <label for="sort-on-popularity" class="sort-radio-label">Popularity</label>
+          <input type="radio" id="sort-on-popularity" name="sort-radio" />
+        </div>
+
+        <div class="spacer" style="height:25px;"></div>
+
+        <button id="sort-button">Sort It!</button>
 
       </div><!-- /.section #index -->
 

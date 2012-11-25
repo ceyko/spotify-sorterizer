@@ -7,6 +7,12 @@ var player = models.player;
 
 
 $(document).ready(function() {
+  /**
+   * Construct jquery elements
+   */
+  $("#sort-radio-container").buttonset();
+  $("#sort-button").button();
+
   /** 
    * Setup #drop_box's handlers: highlight on drag, create playlist on drop.
    */
