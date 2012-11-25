@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <!-- Spotify CSS Files -->
+    <link rel="stylesheet" type="text/css" charset="utf-8" href="sp://resources/css/eve.css">
+    <link rel="stylesheet" type="text/css" charset="utf-8" href="sp://resources/css/api.css">
+    <link rel="stylesheet" type="text/css" charset="utf-8" href="sp://resources/css/player.css">
+    <link rel="stylesheet" type="text/css" charset="utf-8" href="sp://resources/css/ui.css">
+    <link rel="stylesheet" type="text/css" charset="utf-8" href="sp://resources/css/list.css">
+    <style>
+      @import url('sp://sorterizer/css/main.css');
+      @import url('sp://sorterizer/css/jquery-ui.css');
+    </style>
+    <script src="sp://sorterizer/js/jquery.js"></script>
+    <script src="sp://sorterizer/js/jquery-ui.js"></script>
+    <script src="sp://sorterizer/site.js"></script>
+  </head>
+  <body>
+    <div id="wrapper">
+
+      <div id="index" class="section">
+
+        <style>
+          #dropbox {display:table; border:3px dashed #666; text-align:center; margin:auto;}
+          #dropbox.over {opacity:0.8; border-color:#0078a3;}
+          #dropbox-text {width:88px; height:88px; text-align:center; padding:20px;}
+          #smart-player {display:none; margin:1px; margin-bottom:-3px}
+
+          #smart-slider-container {display:none;}
+          #smart-slider-widget {display:table; width:60%; margin:auto; background-color:#f9f9f9; border:1px solid #ddd; padding:10px;}
+          #smart-slider-left {display:table-cell; width:100px; text-align:left;}
+          #smart-slider-right {display:table-cell; width:100px; text-align:right;}
+        </style>
+
+        <div id="dropbox">
+          <div id="dropbox-text">Drop Playlist Here</div>
+          <div id="smart-player"></div>
+        </div>
+
+        <div class="spacer" style="height:15px;"></div>
+
+        <div id="smart-slider-container">
+          <div id="smart-slider-widget" class="ui-widget ui-corner-all">
+            <span id="smart-slider-left">Less shuffled</span>
+            <div id="smart-slider"></div>
+            <span id="smart-slider-right">More shuffled</span>
+          </div>
+        </div>
+
+      </div><!-- /.section #index -->
+
+    </div><!-- /wrapper -->
+  </body>
+</html>
