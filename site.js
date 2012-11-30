@@ -51,6 +51,9 @@ $(document).ready(function() {
       player.context = playlist;
       $("#smart-player").empty().append(player.node);
 
+      // fill in default name for playlist
+      $('#sort-title').val(playlist.name + " (sorted)");
+
       // show player and hide text
       $('#dropbox-text').css('display','none');
       $('#smart-player').css('display','block');
@@ -73,6 +76,7 @@ function sort_by(playlist, name, sort_value) {
   var sorted_tracks = playlist.tracks.clone()
     .sort(function(x,y){ return compare(sort_value(x),sort_value(y)); })
 
+  // all tracks in sorted order to new playlist
   var new_playlist = new models.Playlist(name);
   new_playlist.add(sorted_tracks);
   return new_playlist;
