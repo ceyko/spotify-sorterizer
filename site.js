@@ -88,14 +88,15 @@ function sort_by(playlist, name, sort_value) {
  * @return {Function} models.Track -> (string or number)
  */
 function get_sort_function() {
+  // use lower case so we don't sort A-Z before a-z
   if ($('#sort-on-title').prop('checked')) {
-    return function(x){ return x.name };
+    return function(x){ return x.name.toLowerCase() };
   }
   if ($('#sort-on-artist').prop('checked')) {
-    return function(x){ return x.artists[0].name };
+    return function(x){ return x.artists[0].name.toLowerCase() };
   }
   if ($('#sort-on-album').prop('checked')) {
-    return function(x){ return x.album.name };
+    return function(x){ return x.album.name.toLowerCase() };
   }
   if ($('#sort-on-popularity').prop('checked')) {
     return function(x){ return x.popularity };
